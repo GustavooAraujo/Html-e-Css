@@ -1,0 +1,234 @@
+ body{
+	font-family: 'Roboto', sans serif;
+	color: #333;
+}
+a:link, a:active, a:visited{ /*tags de links*/
+	color: #315e8a;
+	text-decoration: none; /*sem decoração*/
+}
+
+a:hover{/*efeito para quando passar o mouse nos links*/
+	text-decoration: underline;
+}
+
+/*GRID 960px é o tamanho padrão dividinho por 12 colunas = 80px*/
+
+.linha{
+	width: 960px;
+	margin: auto ;
+	overflow: auto;
+	padding: 5px 0;
+}
+
+.coluna{
+	padding: 0 10px;
+	float: left;
+}
+.col1{
+	width:60px;
+}
+
+.col2{
+	width:140px;
+}
+
+.col3{
+	width:220px;
+}	
+
+.col4{
+	width:300px;
+}
+
+.col5{
+	width:380px;
+}
+
+.col6{
+	width:460px;
+}
+
+.col7{
+	width:540px;
+}
+
+.col8{
+	width:620px;
+}
+
+.col9{
+	width:700px;
+}
+
+.col10{
+	width:780px;
+}
+
+.col11{
+	width:860px;
+}
+
+.col12{
+	width:940px;
+}
+
+/* ABAIXO ESTILOS REUTILIZÁVEIS*/
+
+.sem-padding{
+	padding: 0 !important; /*força a utilização do padding ser 0. Mesmo que abaixo tenha algum padding no elemento*/	
+}
+.sem-margin{
+	margin: 0 !important;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight: 500; /* é o peso da fonte. quanto maior o peso, maior será o destaque da fonte */
+	margin: 15px 0 10px 0; /* encima, embaixo, direita e esquerda*/
+}
+ul li, ol li{ /*todos os ítens de uma lista */
+	margin-bottom: 5px;
+}
+ul.inline li, ol.inline li{ /*todos os ítens das listas ul e ol com a class inline */
+	display: inline; /* mostrar em linhas */
+	margin-right: 15px;
+}
+
+ul.inline li:last-child, ol.inline li:last-child{ /*todos os ítens das listas ul e ol com a class inline */
+	margin-right: 0px;
+	/* last-child serve para tirar o MARGIN do último item de menu que não pode ter */
+}
+ul.sem-marcador, ol.sem-marcador{
+	list-style: none; /* para não haver a marcação nas lista. a bolinha */
+}
+a.botao, input.botao{
+	background: #1f3c58; /* cor de fundo */
+	padding: 5px 10px;
+	border-radius: 3px; /*para arredondar a borda do botão */
+	color: #ebebeb;
+	cursor: pointer; /* mouse ficar com a mão */
+	margin: 5px 0;
+	display: inline-block; /* mostrar em linha */
+	border: none; /* para não ter borda nos botões */
+}
+a.botao:hover, input.botao:hover{ /* hover serve para dar efeito quando mouse estiver sobre o botão */
+	background: #315e8a;
+	text-decoration: none; /* para não sublinhar */
+}
+img{
+	max-width: 100%; /* larguma máxima da imagem  100%*/
+	height: auto;
+	width: 100px;
+}
+
+/* LAYOUT DO SITE */
+.header{
+	background: #dee3e6;
+}
+h1.logo{
+	font-weight: 300; /* peso da fonte */
+	color: #315e8a;
+	letter-spacing: -2px;
+}
+.conteudo-extra{
+	background: #f1f2ea;
+}
+.footer{ /* com o ponto na frente é a class footer */
+	background: #1f3c58;
+	color: #ebebeb;
+	padding: 30px 0;
+	text-align: center; 
+	font-weight: 300;
+}
+.menu{
+	text-transform: uppercase; /* para ficar com as letras maiúsculas */
+	text-align: right;
+	margin-top: 15px;
+	font-size: 13.5px;
+}
+.menu li a{
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+.menu li a:hover{ /* ao passar o mouse ficará mais claro o campo */
+	text-decoration: none; 
+	background: #1f3c58;
+	color: #ebebeb;
+}
+ul.noticias li{ /* ítens da lista ul com a class notícias */
+		clear: both; /*para limpar as flutuações */
+		display: block; 
+		overflow: hidden; /* para ocultar conteúdo excedente */
+		margin-bottom: 20px;
+}
+ul.noticias li img{ /* imagem dentro da li que está dentro da ul com class notícias */
+	width: 70px;
+	height: auto;
+	margin-right: 10px;
+	float: left;
+}
+ul.noticias li h4{
+	margin: -2px 0 5px 0;
+	font-weight: 500;
+}
+ul.noticias li p{
+	margin: 5px 0;
+	font-weight: 300;
+}
+ul.noticias li p a{
+	font-weight: 500;
+}
+ .contato label{ /* label dentro das div com class contato */
+ 	display: block;
+ 	font-size: 13px;
+ 	font-weight: 300;
+ }
+.contato input, .contato textarea{
+	display: block; /* para ficar um em cada linha */
+	margin-bottom: 15px; 
+	padding: 5px 2%;
+	width: 96%;
+	/* foi utilizada pixel e porcentagem para não dá problema na coluna do grid */
+}
+.contato textarea{
+	height: 150px;
+}
+.contato input.botao{ /* class botao na tag input que está dentro da class contato */
+	width: auto;
+}
+
+
+
+
+
+
+
+/*procurar na internet a tabela de cores em exadecimal*/
+
+/* letter-spacing: é o espaçamento entre os caracteres, as letras que formam a palavra*/
+
+/* text-transform: uppercase; serve para transforma a letra em letra maiúscula. quer dizer que eu vou transformar tudo em maiúscula*/
+
+/* text-transform: capitalize; serve para transforma a primeira letra de cada palavra em maiúscula.*/
+
+/* text-indent: 20px; serve para fazer IDENTAÇÃO. da o espaço para iniciar o parágrafo*/
+
+/* text-align:right; visa alinhar o texto, neste caso, para direita*/
+
+/* text-align:center; visa alinhar o texto, neste caso, no centro */
+
+/* text-align:justify; visa alinhar o texto, neste caso, tanto na direita quanto na esquerda*/
+
+/* text-shadow: serve para sombrear o texto.*/
+
+/*primeiro define o valor do eixo 'x' ou seja, a quantidade de sombra que quer na horizontal, após a quantidade de sombra que quer na vertical.*/
+
+/*É possível também colocar a cor que você quer.*/
+
+/* font-size:25px; serve para aumentar as letras*/
+
+/* font-family: helvetica; serve para definir o tipo de fonte que você quer utilizar.*/
+
+/*É interessante utilizar vários tipo de fontes, pois irá variar de acordo com o sistema operacional*/
+
+/* PESQUISAR NO GOOGLE FONTES OS TIPOS DE FONTES*/
+
+/* text-align: center; serve para alinha o texto*/
